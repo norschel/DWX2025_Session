@@ -35,7 +35,7 @@ jobs:
     needs: build123
     environment: prod
     steps:
-    - run: echo "deploy"
+    - run: echo "deploy ${{ secrets.MYSECRET }}"
     
   deploy_clients:
     runs-on: ubuntu-latest
